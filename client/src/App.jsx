@@ -1,19 +1,19 @@
-import { Routes, Route, Navigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
-import Login from './pages/Login'
-import Register from './pages/Register'
-import Dashboard from './pages/Dashboard'
-import Analytics from './pages/analytics/Analytics'
-import Buddies from './pages/buddies/Buddies'
-import BuddyProfile from './pages/buddies/BuddyProfile'
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Dashboard from './pages/Dashboard';
+import Analytics from './pages/analytics/Analytics';
+import Buddies from './pages/buddies/Buddies';
+import BuddyProfile from './pages/buddies/BuddyProfile';
 
 function ProtectedRoute({ children }) {
-  const token = useSelector((state) => state.auth.token)
-  return token ? children : <Navigate to="/login" replace />
+  const token = useSelector((state) => state.auth.token);
+  return token ? children : <Navigate to="/login" replace />;
 }
-
+// s
 function App() {
-  const token = useSelector((state) => state.auth.token)
+  const token = useSelector((state) => state.auth.token);
 
   return (
     <Routes>
@@ -56,7 +56,7 @@ function App() {
         }
       />
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;
