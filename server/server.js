@@ -15,7 +15,16 @@ import challengeRoutes from './src/routes/challenge.routes.js';
 import notificationRoutes from './src/routes/notification.routes.js';
 
 const app = express();
-app.use(cors({ origin: process.env.CLIENT_ORIGIN || 'http://localhost:5173' }));
+// app.use(cors({ origin: process.env.CLIENT_ORIGIN || 'http://localhost:5173' }));
+app.use(
+  cors({
+    origin: [
+      'http://localhost:5173',
+      'https://workout-tracker-collab.vercel.app',
+    ],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 app.get('/', (req, res) => {
