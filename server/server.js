@@ -21,6 +21,7 @@ app.use(
     origin: [
       'http://localhost:5173',
       'https://workout-tracker-collab.vercel.app',
+      'https://workout-tracker-nine-lac-97.vercel.app',
     ],
     credentials: true,
   })
