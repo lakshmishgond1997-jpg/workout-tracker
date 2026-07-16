@@ -25,6 +25,7 @@ function Navbar() {
   }, [dispatch])
 
   const handleLogout = () => {
+    if (!window.confirm('Are you sure you want to log out?')) return
     dispatch(logout())
     navigate('/login')
   }
